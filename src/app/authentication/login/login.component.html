@@ -1,0 +1,6 @@
+<h2>Login</h2>
+<form [formGroup]="loginForm" >
+<app-login-email [form]="loginForm" [error]="showError"></app-login-email>
+<app-login-password [form]="loginForm" [error]="showError"></app-login-password>
+<app-login-button (change)="login($event)"></app-login-button>
+</form>

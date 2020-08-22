@@ -1,0 +1,11 @@
+<div class="form-group mb-10" [formGroup]="form">
+    <label for="username">Username</label>
+    <input type="text" formControlName="username" class="form-control"  />
+    <div class="error-container">
+        <div *ngFor="let validation of validationMessages.username">
+            <label class="validation-error" *ngIf="form.get('username').hasError(validation.type) && (form.get('username').dirty || form.get('username').touched || error)">
+                    {{ validation.message }}
+            </label>
+        </div>
+    </div>
+</div>
